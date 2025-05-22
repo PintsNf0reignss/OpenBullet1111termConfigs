@@ -13,7 +13,7 @@
 # install
 
 ```
-git clone https://github.com/esfelurm/OpenBullet
+git clone https://github.com/PintsNf0reignss/OpenBullet1111termConfigs
 cd OpenBullet
 python OpenBullet.py
 ```
